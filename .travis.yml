@@ -7,4 +7,5 @@ before_install:
         - docker build -t darshansbg-react -f Dockerfile.dev .
 
 script:
-        - docker run darshansbg-react npm run test -- --coverage
+        - docker run -e CI=true darshansbg-react npm run test
+
