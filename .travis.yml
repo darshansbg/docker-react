@@ -4,7 +4,7 @@ services:
         - docker
 
 before_install:
-        - docker build -t darshansbg-react-image -f Dockerfile.dev .
+        - docker build -t darshansbg-react -f Dockerfile.dev .
 
 script:
-        - docker run darshansbg-react-image  npm run test -- --coverage
+        - docker run darshansbg-react npm run test -- --coverage
